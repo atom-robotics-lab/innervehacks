@@ -2,7 +2,7 @@ html{
     overflow-x: hidden;
 }
 html::-webkit-scrollbar {
-    width: 0 !important;
+    width: 1 !important;
   }
 body{
 	/*background-color: #f1f5f7;*/
@@ -18,7 +18,7 @@ body{
 	max-width:fit-content;
 }
 .header{
-background-image: url("../images/order_background.jpg");
+background-image: url("../images/order_background1.jpg");
 background-size: cover;
 height:450px;
 }
@@ -66,9 +66,9 @@ form{
 	font-size:18px;
 	text-align: left;
 }
-.iconn{
-	margin-top: 30px;
-	margin-bottom: 50px;
+#icon{
+	height: 100px;
+	width: auto;
 }
 .iconn1{
 	margin-left: -100px;
