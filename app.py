@@ -9,6 +9,10 @@ def index():
 def schedule2():
     return render_template('schedule2.html')
 
+@app.route('/trucker')
+def trucker():
+    return render_template('trucker.html')
+
 
 if __name__=="__main__":
     app.run(debug=True)
