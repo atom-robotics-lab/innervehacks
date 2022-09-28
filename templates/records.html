@@ -1,0 +1,31 @@
+{% extends 'home.html' %} {% block head %}
+<title>Records</title>
+<style>
+    .gradient-custom {
+    background: -webkit-linear-gradient(left, #00a558, #a0d2bb);
+    padding: 50px;
+    height: 100vh;
+  }
+</style>
+
+{% endblock %}
+{% block body %}
+<div class="row gradient-custom text-center" style="min-height: 30%;">
+    <table>  
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>date</th>
+        <th>time</th>
+      </tr>
+      {% for task in tasks %}
+        <tr>
+          <td>{{task.firstname}}</td>
+          <td>{{task.address}}</td>
+          <td>{{task.date}}</td>
+          <td>{{task.time}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+  </div>
+{% endblock %}
