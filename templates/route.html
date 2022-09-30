@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+{% block head %}
+<style>
+.gradient-custom {
+  background: -webkit-linear-gradient(left, #00a558, #a0d2bb);
+  padding: 50px;
+  height: 100vh;
+  width: 100%;
+}
+</style>
+{% endblock %}
+{% block body %}
+<div class="gradient-custom text-center" style="min-height: 30%;">
+  <div class="row text-center"><h1 style="font-size: 60px; margin-top:0px; color:rgb(255, 255, 255); font-weight: 600;">View Your Path</h1></div>
+  <hr>
+<div id="mapnew" style="height:400px;width: 100%;"></div>
+</div>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7fwhWVFHmy4Ga7VnotkCtOGNO0U41EbA&callback=initMap&v=weekly"
+    defer
+  ></script>
+
+{% endblock %}

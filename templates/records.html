@@ -1,7 +1,7 @@
 {% extends 'home.html' %} {% block head %}
 <title>Records</title>
 <style>
-    .gradient-custom {
+  .gradient-custom {
     background: -webkit-linear-gradient(left, #00a558, #a0d2bb);
     padding: 50px;
     height: 100vh;
@@ -12,30 +12,32 @@
 {% endblock %}
 {% block body %}
 <div class="gradient-custom text-center" style="min-height: 30%;">
-<div class="row">
+  <div class="row">
 
-  <div class="col" style="height:40px;">
-    <h1 style="font-size: 30px; margin-top:0px; color:rgb(255, 255, 255); font-weight: 600;float: left;">Your Scheduled pickups are-</h1>
+    <div class="col" style="height:40px;">
+      <h1 style="font-size: 30px; margin-top:0px; color:rgb(255, 255, 255); font-weight: 600;float: left;">Your
+        Scheduled pickups are-</h1>
     </div>
     <div class="col "><button type="submit" class="btn btn-light btn-rounded" style="float:right;">
         <a href="/schedule2"> Go back</a>
       </button></div>
-</div>
-<br>
-    <table class="table">  
-    <tr><th scope="col">Pickup Id.</th>
-        <th scope="col">Name</th>
-        <th scope="col">Address</th>
-        <th scope="col">Category</th>
-      </tr>
-      {% for task in tasks %}
-        <tr>
-          <th scope="row">{{task.id}}</th>
-          <td>{{task.firstname}}</td>
-          <td>{{task.address}}</td>
-          <td>{{task.category}}</td>
-        </tr>
-        {% endfor %}
-    </table>
   </div>
+  <br>
+  <table class="table">
+    <tr>
+      <th scope="col">Pickup Id.</th>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Category</th>
+    </tr>
+    {% for task in tasks %}
+    <tr>
+      <th scope="row">{{task.id}}</th>
+      <td>{{task.firstname}}</td>
+      <td>{{task.address}}</td>
+      <td>{{task.category}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
 {% endblock %}

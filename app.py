@@ -37,6 +37,10 @@ def bio():
     tasks2 = Todo.query.filter_by(category='Bio-Degradable').all()
     return render_template('bio.html',tasks=tasks2)
 
+@app.route('/route')
+def route():
+    return render_template('route.html')
+
 @app.route('/records')
 def records():
     tasks = Todo.query.order_by(Todo.firstname).all()

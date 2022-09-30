@@ -55,8 +55,8 @@
       </button>
     </div>
     <div style="margin-left: 10px" class="text-center">
-      <h3 class="mt-3 text-white"  id="scroll"></h3>
-  </div>
+      <h3 class="mt-3 text-white" id="scroll"></h3>
+    </div>
   </div>
 
   <div class="col-md-9 cen">
@@ -68,151 +68,93 @@
         <div class="card-body mx-5" style="margin-top: -50px;">
           <form action="/schedule2" method="POST" class="mb-0">
             <div class="row mb-4">
-              <button
-                type="button"
-                id="demo"
-                class="btn btn-outline-success btn-rounded"
-                onclick="getLocation()"
-              >
+              <button type="button" id="demo" class="btn btn-outline-success btn-rounded" onclick="getLocation()">
                 Get location
               </button>
             </div>
             <div class="row mb-4">
               <div class="col">
                 <div class="form-outline">
-                  <input
-                    type="text"
-                    name="firstname"
-                    id="firstname"
-                    class="form-control input-custom"
-                    placeholder="First Name"
-                  />
+                  <input type="text" name="firstname" id="firstname" class="form-control input-custom"
+                    placeholder="First Name" />
                 </div>
               </div>
               <div class="col">
                 <div class="form-outline">
-                  <input
-                    type="text"
-                    id="lastname"
-                    class="form-control input-custom"
-                    placeholder="Last Name"
-                  />
+                  <input type="text" id="lastname" class="form-control input-custom" placeholder="Last Name" />
                 </div>
               </div>
             </div>
             <div class="row mb-4">
               <div class="col">
                 <div class="form-outline">
-                  <input
-                    type="text"
-                    id="city"
-                    class="form-control input-custom"
-                    placeholder="City"
-                  />
+                  <input type="text" id="city" class="form-control input-custom" placeholder="City" />
                 </div>
               </div>
               <div class="col">
                 <div class="form-outline">
-                  <input
-                    type="text"
-                    id="zip"
-                    class="form-control input-custom"
-                    placeholder="Zip"
-                  />
+                  <input type="text" id="zip" class="form-control input-custom" placeholder="Zip" />
                 </div>
               </div>
             </div>
             <div class="row mb-4">
               <div class="col">
                 <div class="form-outline">
-                  <input
-                    type="text"
-                    name="address"
-                    id="address"
-                    class="form-control input-custom"
-                    placeholder="Address"
-                  />
+                  <input type="text" name="address" id="address" class="form-control input-custom"
+                    placeholder="Address" />
                 </div>
               </div>
               <div class="col">
                 <div class="form-outline">
-                  <input
-                    type="email"
-                    id="email"
-                    class="form-control input-custom"
-                    placeholder="Email"
-                  />
+                  <input type="email" id="email" class="form-control input-custom" placeholder="Email" />
                 </div>
               </div>
             </div>
             <div class="row mb-4">
               <div class="col">
                 <div class="form-outline">
-                  <input
-                    type="time"
-                    name="time"
-                    id="time"
-                    class="form-control input-custom"
-                    placeholder="Time"
-                  />
+                  <input type="time" name="time" id="time" class="form-control input-custom" placeholder="Time" />
                 </div>
               </div>
               <div class="col">
                 <div class="form-outline">
-                  <input
-                    type="date"
-                    name="date"
-                    id="date"
-                    class="form-control input-custom"
-                    placeholder="date"
-                  />
+                  <input type="date" name="date" id="date" class="form-control input-custom" placeholder="date" />
                 </div>
               </div>
             </div>
             <div class="row mb-4">
               <div class="col">
-              <select name="waste"name="waste" id="waste" class="form-control input-custom">
-              <optgroup>
-                <option value="" disabled selected>Select your option</option>
-                <option>Bio-Degradable</option>
-                <option>E-waste</option>
-                <option>Non-Bio-Degradable</option>
-              </optgroup>
-            </select>
+                <select name="waste" name="waste" id="waste" class="form-control input-custom">
+                  <optgroup>
+                    <option value="" disabled selected>Select your option</option>
+                    <option>Bio-Degradable</option>
+                    <option>E-waste</option>
+                    <option>Non-Bio-Degradable</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="col">
+                <input type="number" id="quantity" class="form-control input-custom" placeholder="Enter weight of waste"
+                  min="0" step="1" />
+              </div>
             </div>
-            <div class="col">
-              <input type="number"
-              id="quantity"
-              class="form-control input-custom"
-              placeholder="Enter weight of waste"
-              min="0"
-              step="1"/>
+            <div class="row mb-4">
+              <div class="col">
+                <input type="file" class="form-control inout-custom" placeholder="Upload Images" />
+              </div>
+              <div class="col float-end">
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-outline-success btn-rounded">
+                  Schedule
+                </button>
+              </div>
             </div>
-            </div>
-            <div class="row mb-4"><div class="col">
-              <input type="file"
-              class="form-control inout-custom"
-              placeholder="Upload Images"/>
-            </div>
-            <div class="col float-end">
-              <!-- Submit button -->
-              <button
-                type="submit"
-                class="btn btn-outline-success btn-rounded"
-              >
-                Schedule
-              </button>
-            </div>
-          </div>
-            
+
           </form>
           <div class="row mb-4">
             <form action="/schedule2" method="GET">
-              <button
-                type="submit"
-                class="btn btn-outline-success btn-rounded"
-              ><a href="/records">
-                View your pickup requests</a>
+              <button type="submit" class="btn btn-outline-success btn-rounded"><a href="/records">
+                  View your pickup requests</a>
               </button>
             </form>
           </div>
@@ -222,11 +164,16 @@
   </div>
 </div>
 <div class="row gradient-custom text-center" style="min-height: 30%;margin-top: -300px;">
-  <div class="col cen"> <h3 class="mt-3 text-white" id="loc"></h3></div>
-  <div class="col cen"><div id="map" style="width: 100%; height: 400px;padding: 20px;color: white;"></div></div>
+  <div class="col cen">
+    <h3 class="mt-3 text-white" id="loc"></h3>
+  </div>
+  <div class="col cen">
+    <div id="map" style="width: 100%; height: 400px;padding: 20px;color: white;"></div>
+  </div>
 </div>
 <script src="{{url_for('static', filename='js/index.js')}}"></script>
-<script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=AIzaSyBPumFitqUXtRI9ET9HhI4GrXcRFa7062E" async="" defer="defer" type="text/javascript"></script>
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=AIzaSyBPumFitqUXtRI9ET9HhI4GrXcRFa7062E"
+  async="" defer="defer" type="text/javascript"></script>
 
 
 
